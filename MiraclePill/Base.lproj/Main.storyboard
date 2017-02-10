@@ -137,6 +137,18 @@
                                     <constraint firstAttribute="height" constant="187" id="fFY-xW-djq"/>
                                 </constraints>
                             </pickerView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49H-Vy-VMa">
+                                <rect key="frame" x="20" y="540" width="274" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="274" id="VpJ-2Y-Auf"/>
+                                    <constraint firstAttribute="height" constant="45" id="yvH-wW-vqt"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Owj-dV-f12"/>
+                                    <segue destination="tJL-fW-xZV" kind="show" id="MCw-ZZ-iIA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -152,11 +164,13 @@
                             <constraint firstItem="uLu-yF-tjO" firstAttribute="top" secondItem="i0b-Ff-VCc" secondAttribute="bottom" constant="8" id="A9Q-vS-aq0"/>
                             <constraint firstItem="gC5-1p-sa7" firstAttribute="trailing" secondItem="ruc-gH-Eee" secondAttribute="trailing" id="D5M-wM-BMR"/>
                             <constraint firstItem="uLu-yF-tjO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E9j-Cc-PEP"/>
+                            <constraint firstItem="49H-Vy-VMa" firstAttribute="top" secondItem="Diq-Ny-Xju" secondAttribute="bottom" constant="15" id="FmL-jO-Ghc"/>
                             <constraint firstItem="ZCT-Gp-Lt9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="G1U-BW-KmO"/>
                             <constraint firstItem="ruc-gH-Eee" firstAttribute="leading" secondItem="ZCT-Gp-Lt9" secondAttribute="leading" id="G5d-Gq-hpY"/>
                             <constraint firstItem="i0b-Ff-VCc" firstAttribute="leading" secondItem="Jhz-xk-T01" secondAttribute="leading" id="Ijc-v8-arz"/>
                             <constraint firstItem="i0b-Ff-VCc" firstAttribute="trailing" secondItem="Jhz-xk-T01" secondAttribute="trailing" id="Ka6-4v-Byw"/>
                             <constraint firstItem="ZCT-Gp-Lt9" firstAttribute="centerX" secondItem="D8C-HZ-szk" secondAttribute="centerX" id="M3r-Io-gr6"/>
+                            <constraint firstItem="49H-Vy-VMa" firstAttribute="leading" secondItem="Jhz-xk-T01" secondAttribute="leading" id="MKf-id-cn2"/>
                             <constraint firstItem="emm-cH-k1b" firstAttribute="top" secondItem="zze-wb-eAw" secondAttribute="bottom" constant="50" id="NQ0-4o-WMt"/>
                             <constraint firstItem="emm-cH-k1b" firstAttribute="centerX" secondItem="zze-wb-eAw" secondAttribute="centerX" id="P3G-9o-pls"/>
                             <constraint firstItem="c0v-fH-W8E" firstAttribute="trailing" secondItem="Qdi-Gx-eLn" secondAttribute="trailing" id="REg-Kv-S5e"/>
@@ -181,16 +195,52 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyBtn" destination="49H-Vy-VMa" id="qQY-oF-fRW"/>
                         <outlet property="statePicker" destination="uLu-yF-tjO" id="vxi-Iq-cyk"/>
                         <outlet property="statePickerBtn" destination="Diq-Ny-Xju" id="SC3-WM-FCk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498.55072463768118" y="194.83695652173915"/>
+            <point key="canvasLocation" x="498.4375" y="194.53125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7lr-av-PPO">
+            <objects>
+                <viewController id="tJL-fW-xZV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C8a-Kr-TGT"/>
+                        <viewControllerLayoutGuide type="bottom" id="KVC-aF-EOC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nWX-Vf-7mW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="KGg-Az-Yv9">
+                                <rect key="frame" x="87" y="267" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9Ab-6N-caT"/>
+                                    <constraint firstAttribute="width" constant="240" id="pCl-V5-LMa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KGg-Az-Yv9" firstAttribute="leading" secondItem="nWX-Vf-7mW" secondAttribute="leadingMargin" constant="67" id="Jpa-lq-Woq"/>
+                            <constraint firstItem="KGg-Az-Yv9" firstAttribute="top" secondItem="C8a-Kr-TGT" secondAttribute="bottom" constant="247" id="NPF-IJ-XHy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KGg-Az-Yv9" secondAttribute="trailing" constant="67" id="YEg-jd-Zyc"/>
+                            <constraint firstItem="KVC-aF-EOC" firstAttribute="top" secondItem="KGg-Az-Yv9" secondAttribute="bottom" constant="341" id="pDU-Qs-ugc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5S-zG-G8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="194"/>
         </scene>
     </scenes>
     <resources>
+        <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>

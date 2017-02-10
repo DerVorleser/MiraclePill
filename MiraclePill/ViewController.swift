@@ -14,6 +14,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var statePickerBtn: UIButton!
     
+    @IBOutlet weak var buyBtn: UIButton!
+    
+    @IBAction func buyBtnPressed(_ sender: Any) {
+    }
+    
+    
     let states = ["Alabama", "Geogia", "Iowa", "Arizona", "Michigan", "Minesota"]
 
     override func viewDidLoad() {
@@ -46,6 +52,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         statePickerBtn.setTitle(states[row], for: UIControlState()) //UIControlState.normal
         statePicker.isHidden = true
+        buyBtn.isHidden = false 
     }
     
     
