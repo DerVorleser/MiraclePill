@@ -130,7 +130,7 @@
                                     <action selector="stateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eb1-OC-iuj"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-yF-tjO">
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-yF-tjO">
                                 <rect key="frame" x="115" y="495" width="185" height="187"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="185" id="Saa-CS-QiF"/>
