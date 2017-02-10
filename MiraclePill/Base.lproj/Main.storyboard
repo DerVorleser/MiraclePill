@@ -217,19 +217,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="KGg-Az-Yv9">
-                                <rect key="frame" x="87" y="267" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="9Ab-6N-caT"/>
-                                    <constraint firstAttribute="width" constant="240" id="pCl-V5-LMa"/>
-                                </constraints>
+                                <rect key="frame" x="117" y="278" width="180" height="180"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KGg-Az-Yv9" firstAttribute="leading" secondItem="nWX-Vf-7mW" secondAttribute="leadingMargin" constant="67" id="Jpa-lq-Woq"/>
-                            <constraint firstItem="KGg-Az-Yv9" firstAttribute="top" secondItem="C8a-Kr-TGT" secondAttribute="bottom" constant="247" id="NPF-IJ-XHy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KGg-Az-Yv9" secondAttribute="trailing" constant="67" id="YEg-jd-Zyc"/>
-                            <constraint firstItem="KVC-aF-EOC" firstAttribute="top" secondItem="KGg-Az-Yv9" secondAttribute="bottom" constant="341" id="pDU-Qs-ugc"/>
+                            <constraint firstItem="KGg-Az-Yv9" firstAttribute="centerX" secondItem="nWX-Vf-7mW" secondAttribute="centerX" id="0eR-RZ-IMl"/>
+                            <constraint firstItem="KGg-Az-Yv9" firstAttribute="centerY" secondItem="nWX-Vf-7mW" secondAttribute="centerY" id="s4N-oX-9dr"/>
                         </constraints>
                     </view>
                 </viewController>
